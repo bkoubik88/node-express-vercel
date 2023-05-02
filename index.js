@@ -11,7 +11,7 @@ app.use(express.json());
 dotenv.config();
 app.use(cors());
 
-app.use("/api/user", userRoute);
+app.use("/server/user", userRoute);
 
 const db = () => {
   mongoose.connect(process.env.MONGO_URL).then(() => {
