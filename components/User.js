@@ -10,6 +10,10 @@ export const newUser = async (req, res, next) => {
     console.log("SAVED USER IN MONGODB: " + savedUser);
 
     res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "Origin, Content-Type, Accept"
+    );
 
     res.status(200).json(savedUser);
   } catch (error) {
