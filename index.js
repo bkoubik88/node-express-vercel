@@ -22,5 +22,3 @@ const db = () => {
 app.listen(3999, () => {
   db();
 });
-
-module.exports = app;
