@@ -12,11 +12,8 @@
       "dest": "./index.js"
     }
   ],
-  "env": {
-    "MY_SECRET": "supersecret"
-  },
+
   "build": {
- 
     "command": "npm start"
   }
 }
