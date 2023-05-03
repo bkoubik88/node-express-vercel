@@ -4,9 +4,13 @@ import User from "../model/User.js";
 export const newUser = async (req, res, next) => {
   try {
     const user = new User({ ...req.body.user });
-    console.log("SAVED USER IN MONGODB: " + user);
+
     const savedUser = await user.save();
+
+    console.log("SAVED USER IN MONGODB: " + savedUser);
+
     res.header("Access-Control-Allow-Origin", "*");
+
     res.status(200).json(savedUser);
   } catch (error) {
     console.log(error);
