@@ -14,7 +14,7 @@ app.use(cors());
 app.use("/server/user", userRoute);
 
 const db = () => {
-  mongoose.connect(process.env.MONGO_URL).then(() => {
+  mongoose.connect(process.env.MONGODB_URI).then(() => {
     console.log("MONGO Runs!");
   });
 };
