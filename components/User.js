@@ -7,6 +7,8 @@ export const newUser = async (req, res, next) => {
 
     console.log("USER BEFORE: " + user);
 
+    console.log("MONGODB_URI: " + process.env.MONGODB_URI);
+
     const savedUser = await user.save();
 
     console.log("SAVED USER IN MONGODB: " + savedUser);
