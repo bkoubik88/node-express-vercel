@@ -5,6 +5,8 @@ export const newUser = async (req, res, next) => {
   try {
     const user = new User({ ...req.body.user });
 
+    console.log("USER BEFORE: " + user);
+
     const savedUser = await user.save();
 
     console.log("SAVED USER IN MONGODB: " + savedUser);
