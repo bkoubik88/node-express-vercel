@@ -2,8 +2,8 @@
   "version": 2,
   "builds": [
     {
-      "src": "package.json",
-      "use": "@vercel/node"
+      "src": "./index.js",
+      "use": "@now/node"
     }
   ],
   "routes": [
@@ -11,10 +11,5 @@
       "src": "/(.*)",
       "dest": "./index.js"
     }
-  ],
-
-  "build": {
-   
-    "command": "npm start"
-  }
+  ]
 }
