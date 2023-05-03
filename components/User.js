@@ -7,10 +7,7 @@ export const newUser = async (req, res, next) => {
 
     const savedUser = await user.save();
 
-    res.statusCode = 200;
-    res.setHeader("Content-Type", "application/json");
-    res.setHeader("Cache-Control", "max-age=180000");
-    res.end(JSON.stringify(savedUser));
+    res.statusCode(200);
   } catch (error) {
     console.log(error);
   }
