@@ -16,10 +16,7 @@
     "MY_SECRET": "supersecret"
   },
   "build": {
-    "env": {
-      "DB_HOST": "@database_host",
-      "DB_PORT": "@database_port"
-    },
-    "command": "npm run build"
+ 
+    "command": "npm start"
   }
 }
