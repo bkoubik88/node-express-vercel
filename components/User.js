@@ -7,6 +7,15 @@ export const newUser = async (req, res, next) => {
 
     const savedUser = await user.save();
 
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader(
+      "Access-Control-Allow-Methods",
+      "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+    );
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "Content-Type, Authorization"
+    );
     res.status(200).json(savedUser);
   } catch (error) {
     console.log(error);
