@@ -7,11 +7,7 @@ export const newUser = async (req, res, next) => {
 
     const savedUser = await user.save();
 
-    const time = setTimeout(() => {
-      res.status(200).json(savedUser);
-    }, 3500);
-
-    clearTimeout(time);
+    res.status(200).json(savedUser);
   } catch (error) {
     res.status(200).json("ERROR");
   }
