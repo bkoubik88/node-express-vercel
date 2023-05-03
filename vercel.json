@@ -1,15 +1,25 @@
 {
-
-  "version":2,
-  "builds":[
+  "version": 2,
+  "builds": [
     {
-      "src":"./index.js",
-      "use":"@now/node"
+      "src": "package.json",
+      "use": "@vercel/node"
     }
   ],
-  "routes":[{
-    "src": "/(.*)",
-    "dest":"./index.js"
-  
-    }]
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "./index.js"
+    }
+  ],
+  "env": {
+    "MY_SECRET": "supersecret"
+  },
+  "build": {
+    "env": {
+      "DB_HOST": "@database_host",
+      "DB_PORT": "@database_port"
+    },
+    "command": "npm run build"
+  }
 }
