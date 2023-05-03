@@ -13,7 +13,7 @@
     }
   ],
   "env": {
-    "MONGO_URL": "mongodb+srv://Ben:3072inneB@cluster0.adhwf.mongodb.net/portolio",
+    "MONGO_URL": "mongodb+srv://Ben:3072inneB@cluster0.adhwf.mongodb.net/portolio"
   
   }
 }
