@@ -7,16 +7,10 @@ export const newUser = async (req, res, next) => {
 
     const savedUser = await user.save();
 
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader(
-      "Access-Control-Allow-Methods",
-      "OPTIONS, GET, POST, PUT, PATCH, DELETE"
-    );
-    res.setHeader(
-      "Access-Control-Allow-Headers",
-      "Content-Type, Authorization"
-    );
-    res.status(200).json(savedUser);
+    res.statusCode = 200;
+    res.setHeader("Content-Type", "application/json");
+    res.setHeader("Cache-Control", "max-age=180000");
+    res.end(JSON.stringify(savedUser));
   } catch (error) {
     console.log(error);
   }
