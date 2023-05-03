@@ -16,7 +16,7 @@
     }
   ],
   "env": {
-    "MONGO_URL": "mongodb+srv://Ben:3072inneB@cluster0.adhwf.mongodb.net/portolio"
+    "MONGO_URL": "mongodb+srv://vercel-admin-user:tiydhuOVH5k5bxrN@cluster0.adhwf.mongodb.net/portfolio?retryWrites=true&w=majority"
   
   }
 }
