@@ -5,15 +5,9 @@ export const newUser = async (req, res, next) => {
   try {
     const user = new User({ ...req.body.user });
 
-    console.log("USER BEFORE: " + user);
-
-    console.log("MONGODB_URI: " + process.env.MONGODB_URI);
-
     const savedUser = await user.save();
 
     console.log("SAVED USER IN MONGODB: " + savedUser);
-
-    res.setHeader("Content-Type", "application/json");
 
     res.setHeader("Access-Control-Allow-Origin", "*");
 
