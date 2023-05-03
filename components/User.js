@@ -7,9 +7,9 @@ export const newUser = async (req, res, next) => {
 
     const savedUser = await user.save();
 
-    return res.status(200).send(savedUser);
+    res.status(200).json("OK");
   } catch (error) {
-    console.log(error);
+    res.status(200).json("ERROR");
   }
 };
 
