@@ -2,6 +2,7 @@ import User from "../model/User.js";
 
 //CREATE NEW USER
 export const newUser = async (req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
   try {
     if (req.body) {
       console.log(req.body.user);
