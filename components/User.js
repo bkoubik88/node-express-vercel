@@ -10,10 +10,10 @@ export const newUser = async (req, res, next) => {
     });
 
     myPromise.then((res) => {
-      res.status(200).json("User was saved");
+      return res.status(200).send("User was saved");
     });
   } catch (error) {
-    res.send("error");
+    return res.send("error");
   }
 };
 
