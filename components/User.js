@@ -9,8 +9,8 @@ export const newUser = async (req, res, next) => {
       resolve(user.save());
     });
 
-    myPromise.then(() => {
-      res.status(200).json("User stored!");
+    myPromise.then((res) => {
+      res.status(200).json(res.data);
     });
   } catch (error) {
     return res.status(404).send("error");
