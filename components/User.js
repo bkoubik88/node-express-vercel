@@ -10,11 +10,10 @@ export const newUser = async (req, res, next) => {
     });
 
     myPromise.then((res) => {
-      console.log(res);
-      res.status(200).json(res.data);
+      res.json(res.data);
     });
   } catch (error) {
-    return res.status(404).send("error");
+    res.send("error");
   }
 };
 
