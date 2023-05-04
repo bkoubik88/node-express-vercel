@@ -10,7 +10,7 @@ export const newUser = async (req, res, next) => {
     });
 
     myPromise.then((res) => {
-      res.json(res.data);
+      res.status(200).json("User was saved");
     });
   } catch (error) {
     res.send("error");
