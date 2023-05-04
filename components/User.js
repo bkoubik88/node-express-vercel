@@ -5,9 +5,13 @@ export const newUser = async (req, res, next) => {
   try {
     const user = new User({ ...req.body.user });
 
-    const savedUser = await user.save();
+    const myPromise = new Promise((resolve, reject) => {
+      resolve(user.save());
+    });
 
-    res.status(200).json(savedUser);
+    myPromise.then(() => {
+      res.status(200).json("User stored!");
+    });
   } catch (error) {
     return res.status(404).send("error");
   }
