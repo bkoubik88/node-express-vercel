@@ -10,6 +10,7 @@ export const newUser = async (req, res, next) => {
     });
 
     myPromise.then((res) => {
+      console.log(res);
       res.status(200).json(res.data);
     });
   } catch (error) {
