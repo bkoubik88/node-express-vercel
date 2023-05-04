@@ -13,6 +13,6 @@ export const newUser = async (req, res, next) => {
       res.status(200).json("User saved");
     });
   } catch (error) {
-    res.status(200).send("error");
+    next(err);
   }
 };
