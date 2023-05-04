@@ -9,7 +9,7 @@ export const newUser = async (req, res, next) => {
       resolve(user.save());
     });
 
-    myPromise.then((res) => {
+    myPromise.then((result) => {
       res.status(200).json("User saved");
     });
   } catch (error) {
