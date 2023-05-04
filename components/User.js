@@ -7,9 +7,7 @@ export const newUser = async (req, res, next) => {
 
     const savedUser = await user.save();
 
-    if (savedUser) {
-      res.status(200).send(savedUser);
-    }
+    return res.status(200).send(savedUser);
   } catch (error) {
     return res.status(404).send("error");
   }
