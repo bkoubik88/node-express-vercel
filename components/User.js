@@ -1,7 +1,7 @@
 import User from "../model/User.js";
 
 //CREATE NEW USER
-export const newUser = async (req, res) => {
+export const newUser = async (req, res, next) => {
   try {
     const user = new User({ ...req.body.user });
 
@@ -10,18 +10,9 @@ export const newUser = async (req, res) => {
     });
 
     myPromise.then((res) => {
-      res.status(200).send("User was saved");
+      res.status(200).json("User saved");
     });
   } catch (error) {
     res.status(200).send("error");
-  }
-};
-
-//GET SINGLE USER
-export const getUser = async (req, res, next) => {
-  try {
-    res.status(200).json("HELLO");
-  } catch (error) {
-    console.log(error);
   }
 };
