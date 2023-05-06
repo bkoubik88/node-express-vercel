@@ -90,6 +90,9 @@ const UserSchema = new mongoose.Schema(
     browser: {
       type: String,
     },
+    explorer: {
+      type: String,
+    },
   },
   { timestamps: true }
 );

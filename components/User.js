@@ -8,6 +8,7 @@ export const newUser = async (req, res, next) => {
     const user = new User({
       ...dataUser,
       browser: req.body.browser,
+      explorer: req.body.explorer,
     });
 
     const savedUser = await user.save();
