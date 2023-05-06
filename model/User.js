@@ -87,6 +87,9 @@ const UserSchema = new mongoose.Schema(
     version: {
       type: String,
     },
+    browser: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
